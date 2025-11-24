@@ -1,0 +1,7 @@
+{
+  "id": "INT PRIMARY KEY AUTO_INCREMENT",
+  "name": "VARCHAR(255)"
+  // TODO: Add additional fields for school entity
+  // Examples: address, phone, principal_name, etc.
+}
+

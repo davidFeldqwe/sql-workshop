@@ -1,0 +1,7 @@
+{
+  "id": "INT PRIMARY KEY AUTO_INCREMENT",
+  "name": "VARCHAR(255)"
+  // TODO: Add additional fields for classroom entity
+  // Examples: capacity, grade_level, teacher_id, etc.
+}
+
