@@ -1,0 +1,7 @@
+{
+  "id": "INT PRIMARY KEY AUTO_INCREMENT",
+  "grade": "INT NOT NULL",
+  "index": "INT NOT NULL",
+  "teacher_id": "INT"
+}
+

@@ -4,11 +4,12 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var studentRouter = require('./routes/student.routes');
-var teacherRouter = require('./routes/teacher.routes');
+var indexRouter = require('./routes/index.routes');
 var schoolRouter = require('./routes/school.routes');
+var teacherRouter = require('./routes/teacher.routes');
+var classroomRouter = require('./routes/classroom.routes');
+var studentRouter = require('./routes/student.routes');
+var queryRouter = require('./routes/query.routes');
 
 var app = express();
 
@@ -16,10 +17,14 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '../public')));
 
 app.use('/', indexRouter);
 app.use('/schools', schoolRouter);
+app.use('/teachers', teacherRouter);
+app.use('/classrooms', classroomRouter);
+app.use('/students', studentRouter);
+app.use('/queries', queryRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
